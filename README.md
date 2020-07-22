@@ -35,7 +35,7 @@ Mac OS local folder of Vagrant provision
 => PV named manual-mnt-local
 => PVC for nginx pod
 ```
-#### Test #1
+#### Test #1 Associate PV=>PVC=>Pod
 1. mount pv folder on vagrant provision folder
 ```
 vagrant halt
@@ -61,7 +61,7 @@ follow below post if get stuck deleting old pv/pvchttps://stackoverflow.com/ques
  k patch pvc task-pv-claim -p '{"metadata":{"finalizers": []}}' --type=merge
 ```
  
-#### Test #2
+#### Test #2 Associate PV => Statefulset via volumeClaimTemplates
 Storage management workflow:
 ```
 Mac OS local folder of Vagrant provision 
