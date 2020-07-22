@@ -98,3 +98,6 @@ kubectl exec -it web-0 -- /bin/bash
       curl localhost
       #Outcome:test local-volume mnt from vagrant vm, associated from vagrant provision folder on local pc
 ```
+
+### Test #3
+PostgreSQL cluster using statefulsets https://kubernetes.io/blog/2017/02/postgresql-clusters-kubernetes-statefulsets
