@@ -77,8 +77,24 @@ Delete the pvc and pvc created in Test #1
 ```
 k patch pvc task-pv-claim -p '{"metadata":{"finalizers": []}}' --type=merge
 k delete pvc task-pv-claim
+kg pv
+#PV status should be releasing
+
 k delete pv task-pv-volume
 ```
 Re-user the pv from Test #1 and associate it to statefulset nginx
+```
 k apply -f pv-volume.yaml
 k apply -f web-stateful-pvc.yaml
+k apply -f pv-volume.yaml 
+kg pv
+#PV status should be available
+
+k apply -f web-stateful-pvc.yaml
+kg pods
+kubectl exec -it web-0 -- /bin/bash
+      apt-get update
+      apt-get install curl
+      curl localhost
+      #Outcome:test local-volume mnt from vagrant vm, associated from vagrant provision folder on local pc
+```
