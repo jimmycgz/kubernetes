@@ -70,8 +70,13 @@ Mac OS local folder of Vagrant provision
 => PVC for statefulset nginx
 => Nginx pod relica
 ```
-Follow below doc:
-https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
+Follow below docs:
+#Single static pv/pvc
+https://www.bogotobogo.com/DevOps/Docker/Docker_Kubernetes_StatefulSet.php
+
+#Dynamic multiple pv/pvc
+https://www.magalix.com/blog/kubernetes-statefulsets-101-state-of-the-pods#:~:text=A%20StatefulSet%20is%20another%20Kubernetes,pods%20with%20well%2Ddefined%20names.
+https://docs.openshift.com/container-platform/3.5/install_config/storage_examples/storage_classes_dynamic_provisioning.html
 
 Delete the pvc and pvc created in Test #1
 ```
