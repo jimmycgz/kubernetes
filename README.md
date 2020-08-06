@@ -1,5 +1,13 @@
 # Kubernetes playground on local PC Mac OS
 
+### Task List
+* Setup 3 VMs via Vagrant and VirtualBox 
+* Test #1 Associate PV=>PVC=>Pod
+* Test #2 Associate PV => Statefulset via volumeClaimTemplates
+* Test #3 DB statefulset
+* Test #4 Blue/Green deployment
+* Test #5 Canary deployment
+
 ### Setup 3 VMs via Vagrant and VirtualBox 
 * Install Virtuabox by downloading the package from Oracle web
 * Install Vagrant by downloading the package from Hashcorp web
@@ -104,5 +112,39 @@ kubectl exec -it web-0 -- /bin/bash
       #Outcome:test local-volume mnt from vagrant vm, associated from vagrant provision folder on local pc
 ```
 
-### Test #3
+#### Test #3 DB statefulset
 PostgreSQL cluster using statefulsets https://kubernetes.io/blog/2017/02/postgresql-clusters-kubernetes-statefulsets
+
+#### Test #4 Blue/Green deployment
+Refer to the light weight approach: https://www.ianlewis.org/en/bluegreen-deployments-kubernetes
+Basically switch over k8s service via spec.selector to different labels(like name and version)
+```
+apiVersion: v1
+kind: Service
+metadata: 
+  name: nginx
+  labels: 
+    name: nginx
+spec:
+  selector: 
+    name: nginx
+    version: "1.11" # switch between 1.10 and 1.11
+    ...
+```
+
+#### Test #5 Canary deployment
+Refer to the light weight approach: https://kubesphere.io/docs/quick-start/ingress-canary/
+Solution is to use Ingress-Nginx Annotation to define the percentage of canary-weight
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: canary
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/canary: "true"
+    nginx.ingress.kubernetes.io/canary-weight: "10"
+...
+```
+
+
