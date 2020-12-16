@@ -1,5 +1,7 @@
 # Kubernetes playground on local PC Mac OS
 
+Refer to cka.md for how to setup everything manually.
+
 ### Task List
 * Setup 3 VMs via Vagrant and VirtualBox 
 * Test #1 Associate PV=>PVC=>Pod
