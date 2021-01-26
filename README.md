@@ -11,7 +11,10 @@ Refer to cka.md for how to setup everything manually.
 * Test #5 Canary deployment
 
 ### Setup 3 VMs via Vagrant and VirtualBox 
-* Install Virtuabox by downloading the package from Oracle web
+* Install Virtuabox by downloading the package from Oracle web, see below command for Mac PC
+```
+brew install virtualbox
+```
 * Install Vagrant by downloading the package from Hashcorp web
 https://learn.hashicorp.com/vagrant/getting-started/
 * Provision a test website 
