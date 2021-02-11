@@ -66,7 +66,7 @@ Follow https://www.bogotobogo.com/DevOps/Docker/Docker_Kubernetes_PersistentVolu
 3. create pvc and associate with pv
 4. Test pvc on nginx pod
 ```
-k apply -f pv-pod.yaml
+k apply -f pvc-pod.yaml
 kubectl exec -it task-pv-pod -- /bin/bash
 apt-get update
 apt-get install curl
