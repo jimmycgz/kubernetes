@@ -66,9 +66,11 @@ Follow https://www.bogotobogo.com/DevOps/Docker/Docker_Kubernetes_PersistentVolu
 3. create pvc and associate with pv
 4. Test pvc on nginx pod
 ```
-k apply -f pv-pod.yamlkubectl exec -it task-pv-pod -- /bin/bash
+k apply -f pv-pod.yaml
+kubectl exec -it task-pv-pod -- /bin/bash
 apt-get update
-apt-get install curlcurl localhost
+apt-get install curl
+curl localhost
 ```
 follow below post if get stuck deleting old pv/pvc
 
@@ -94,7 +96,7 @@ https://www.bogotobogo.com/DevOps/Docker/Docker_Kubernetes_StatefulSet.php
 https://www.magalix.com/blog/kubernetes-statefulsets-101-state-of-the-pods#:~:text=A%20StatefulSet%20is%20another%20Kubernetes,pods%20with%20well%2Ddefined%20names.
 https://docs.openshift.com/container-platform/3.5/install_config/storage_examples/storage_classes_dynamic_provisioning.html
 
-Delete the pvc and pvc created in Test #1
+Delete the pvc and pv created in Test #1
 ```
 k patch pvc task-pv-claim -p '{"metadata":{"finalizers": []}}' --type=merge
 k delete pvc task-pv-claim
@@ -103,7 +105,7 @@ kg pv
 
 k delete pv task-pv-volume
 ```
-Re-user the pv from Test #1 and associate it to statefulset nginx
+Re-use the pv from Test #1 and associate it to statefulset nginx
 ```
 k apply -f pv-volume.yaml
 k apply -f web-stateful-pvc.yaml
