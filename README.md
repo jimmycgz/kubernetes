@@ -65,10 +65,11 @@ ll /vargant
 Follow https://www.bogotobogo.com/DevOps/Docker/Docker_Kubernetes_PersistentVolumes_PersistentVolumeClaims.php
 3. create pvc and associate with pv
 4. Test pvc on nginx pod
+```
 k apply -f pv-pod.yamlkubectl exec -it task-pv-pod -- /bin/bash
 apt-get update
 apt-get install curlcurl localhost
-
+```
 follow below post if get stuck deleting old pv/pvc
 
 https://stackoverflow.com/questions/51358856/kubernetes-cant-delete-persistentvolumeclaim-pvc
