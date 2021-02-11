@@ -69,7 +69,9 @@ k apply -f pv-pod.yamlkubectl exec -it task-pv-pod -- /bin/bash
 apt-get update
 apt-get install curlcurl localhost
 
-follow below post if get stuck deleting old pv/pvchttps://stackoverflow.com/questions/51358856/kubernetes-cant-delete-persistentvolumeclaim-pvc
+follow below post if get stuck deleting old pv/pvc
+
+https://stackoverflow.com/questions/51358856/kubernetes-cant-delete-persistentvolumeclaim-pvc
 ```
  k patch pvc task-pv-claim -p '{"metadata":{"finalizers": []}}' --type=merge
 ```
