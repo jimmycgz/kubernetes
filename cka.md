@@ -23,9 +23,18 @@ More to practice:
 * Assume the k8s is crashed, how could you recover/restore?
 
 ## The only Tips worked for me
-Fast, time is key.
+Fast, time management is key. How to fullfil it quickly and correctly.
 
 ## More tips:
+
+### Is it Difficult?
+Not at all for me, after working in this area for some years. So I thought I would get 95% after writing it, but actually I lost points for several tasks and don't even know why.
+
+### Mistakes duirng the exam
+First of all read the questions carefully, because you'll very easily to make mistake, like below:
+* Forgot switching over contexts
+* Done it in a wrong namespace, not every step goes to ns Default
+* Didn't specify some arguments on the command, like --target-port when exposing a svc
 
 ### Shall I use aliases? May I use them during the exam?
 I do want to use aliases and don't like auto-completion. But I can't garantee the proctor will allow you to download anything. I listed 50 aliases in Notepad and asked her if I could copy/paste them to the exam terminal? The answer I got is: the Notepad is not allowed. So take your own risk here...
@@ -36,7 +45,9 @@ Someone said yes who did that on 3 hours version. I was not allowed to install a
 
 ## Notes: 
 * Many of the public training courses, tips, and example tests on the internet are for the old-3-hour version, don't waste too much time on them.
-* You have one time re-take, so don't be too stressed before and during the first exam, you'll get to know what to practice more and more if failed the first time.
+* You have one time free re-take, so don't be too stressed before and during the first exam, you'll get to know what to practice more and more if failed the first time.
+* I don't even know why I lost points on some of the tasks, I thought I knew every piece of the concept and knowledge and theory. Hopefully you can figure out that for me when you pass it. 
+
 
 ## Sources
 
