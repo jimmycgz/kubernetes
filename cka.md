@@ -28,25 +28,25 @@ Fast, time management is key. How to fullfil it quickly and correctly.
 ## More tips:
 
 ### Is it Difficult?
-Not at all for me, after working in this area for some years. So I thought I would get 95% after writing it, but actually I lost points for several tasks and don't even know why.
+Not at all for me, after working in this area for some years. So I thought I would get 95% after writing it, but actually I lost points for several tasks and don't even know why. I thought I knew every piece of the concept and knowledge and theory, but many of the tasks don't specify how to fullfil it via what way. Eg: I know there are 7 pods are up running, but I'm not sure how should I write this number to the output file, may I `echo 7 > filename.txt`, or manually edit the file, or I must use `jsonpath and wc -l`? Hopefully you can figure out that for me when you pass it. 
 
 ### Mistakes duirng the exam
 First of all read the questions carefully, because you'll very easily to make mistake, like below:
 * Forgot switching over contexts
-* Done it in a wrong namespace, not every step goes to ns Default
+* Done it in a wrong namespace, not every step goes to Default ns in one task.
 * Didn't specify some arguments on the command, like --target-port when exposing a svc
 
 ### Shall I use aliases? May I use them during the exam?
 I do want to use aliases and don't like auto-completion. But I can't garantee the proctor will allow you to download anything. I listed 50 aliases in Notepad and asked her if I could copy/paste them to the exam terminal? The answer I got is: the Notepad is not allowed. So take your own risk here...
+
 Find my 50 golden aliases here: https://github.com/jimmycgz/dotfiles/blob/master/k8s
 
 ### Can I use my own dotfiles for aliases and vim config?
 Someone said yes who did that on 3 hours version. I was not allowed to install anything on the 2 hours version. 
 
-## Notes: 
+## Some Notes: 
 * Many of the public training courses, tips, and example tests on the internet are for the old-3-hour version, don't waste too much time on them.
 * You have one time free re-take, so don't be too stressed before and during the first exam, you'll get to know what to practice more and more if failed the first time.
-* I don't even know why I lost points on some of the tasks, I thought I knew every piece of the concept and knowledge and theory. Hopefully you can figure out that for me when you pass it. 
 
 
 ## Sources
@@ -54,19 +54,14 @@ Someone said yes who did that on 3 hours version. I was not allowed to install a
 ### Details about the exam
 https://github.com/cncf/curriculum/
 
-### Work hard on below tasks
-* https://github.com/kelseyhightower/kubernetes-the-hard-way
-Cloned to $HOME/certs/cka
-
 ### What you can access during the exam:
 * The official doc during
 https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
 
-
 ### What you don't need to spend too much time on
 * Creating yaml files from scratch, just copy/paste from the offical doc
 
-### Build your own cluster on MAC PC using Virtualbox, Vagrant with Ubuntu 20.04 image
+### Build your own cluster on MAC PC using Virtualbox, Vagrant with Ubuntu 20.04 image, details see below exercise.
 https://github.com/justmeandopensource/kubernetes/blob/master/vagrant-provisioning/Vagrantfile
 
 ## Exercises
@@ -93,7 +88,7 @@ practice: https://learn.hashicorp.com/vagrant/getting-started/
 * Launch 2 VMs by Vagrant, can leverage below launch template and disable all of the bootstrap scripts
 https://github.com/justmeandopensource/kubernetes/blob/master/vagrant-provisioning/Vagrantfile
 
-Disable all of the bash scripts in the vagrant file, then bootstrap the master and worker nodes manually by yourself, you'll learn all the steps via kubeadm.
+#### Stronly suggest to disable all of the bash scripts in the vagrant file, then bootstrap the master and worker nodes manually by yourself, you'll learn all the steps via kubeadm.
 
 Run `vagrant up` in the folder where has the above launch template file
 More commands
