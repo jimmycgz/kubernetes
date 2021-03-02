@@ -1,9 +1,47 @@
-# Preparation for CKA
+# My Journey to Clear CKA (Certified on March 1st, 2021)
+
+### The best training course I recommend:
+
+Certified Kubernetes Administrator (CKA) with Practice Tests on Udemy
+https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/
+
+It offers labs to exercise after each training session, also has Lighting Labs and Mock exams at the end.
+Just go through the full course and then practice as many times (5+) as you can with all of the labs, especially below ones:
+
+* Ingress
+* Networkpolicy
+* Install and upgrade k8s cluster via kubeadm
+* PV, PVC, storage class with POD
+* Lighting labs
+* RBAC
+* POD: Static Pod, multi-containers, init-containers
+* svc
+* deployment
+* All Mock exams
+
+More to practice:
+* Assume the k8s is crashed, how could you recover/restore?
+
+### The only Tips worked for me
+Fast, time is key.
+
+## More tips:
+
+### Shall I use aliases? May I use them during the exam?
+I do want to use aliases and don't like auto-completion. But I can't garantee the proctor will allow you to download anything. I listed 50 aliases in Notepad and asked her if I could copy/paste them to the exam terminal? The answer I got is: the Notepad is not allowed. So take your own risk here...
+Find my 50 golden aliases here: https://github.com/jimmycgz/dotfiles/blob/master/k8s
+
+### Can I use my own dotfiles for aliases and vim config?
+Someone said yes who did that on 3 hours version. I was not allowed to install anything on the 2 hours version. 
+
+## Notes: 
+* Many of the public training courses, tips, and example tests on the internet are for the old-3-hour version, don't waste too much time on them.
+* You have one time re-take, so don't be too stressed before and during the first exam, you'll get to know what to practice more and more if failed the first time.
 
 ## Sources
 
 ### Details about the exam
-https://github.com/cncf/curriculum/blob/master/CKA_Curriculum_v1.19.pdf
+https://github.com/cncf/curriculum/
 
 ### Work hard on below tasks
 * https://github.com/kelseyhightower/kubernetes-the-hard-way
@@ -13,11 +51,6 @@ Cloned to $HOME/certs/cka
 * The official doc during
 https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
 
-* Your own dotfile repo
-
-### Key concepts to understand well:
-* static pod vs daemon set vs sts
-* 
 
 ### What you don't need to spend too much time on
 * Creating yaml files from scratch, just copy/paste from the offical doc
@@ -48,6 +81,9 @@ practice: https://learn.hashicorp.com/vagrant/getting-started/
 
 * Launch 2 VMs by Vagrant, can leverage below launch template and disable all of the bootstrap scripts
 https://github.com/justmeandopensource/kubernetes/blob/master/vagrant-provisioning/Vagrantfile
+
+Disable all of the bash scripts in the vagrant file, then bootstrap the master and worker nodes manually by yourself, you'll learn all the steps via kubeadm.
+
 Run `vagrant up` in the folder where has the above launch template file
 More commands
 ```
