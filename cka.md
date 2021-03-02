@@ -22,7 +22,7 @@ Just go through the full course and then practice as many times (5+) as you can 
 More to practice:
 * Assume the k8s is crashed, how could you recover/restore?
 
-### The only Tips worked for me
+## The only Tips worked for me
 Fast, time is key.
 
 ## More tips:
