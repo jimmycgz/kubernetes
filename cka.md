@@ -138,10 +138,12 @@ ssh kmaster
 ```
 
 ### How to access the k8s cluster at local PC
-Copy the admin.conf to kube config
+Copy the admin.conf from the master node to local PC as kube config
 ```
 mv ~/.kube/config ~/.kube/bkp-conf
-scp kmaster:/home/vagrant/.kube/config ~/.kube/config
+ssh kmaster 'sudo cp /etc/kubernetes/admin.conf /home/vagrant'
+ssh kmaster 'sudo chown vagrant:vagrant /home/vagrant/admin.conf'
+scp kmaster:/home/vagrant/admin.conf ~/.kube/config
 kg po
 ```
 
