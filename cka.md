@@ -23,21 +23,21 @@ More to practice:
 * Assume the k8s is crashed, how could you recover/restore?
 
 ## The only Tips worked for me
-Fast, time management is key. How to fullfil it quickly and correctly.
+Fast, time management is key. How to answer it quickly and correctly.
 
 ## More tips:
 
 ### Is it Difficult?
-Not at all for me, after working in this area for some years. So I thought I would get 95% after writing it, but actually I lost points for several tasks and don't even know why. I thought I knew every piece of the concept and knowledge and theory, but many of the tasks don't specify how to fullfil it via what way. Eg: I know there are 7 pods are up running, but I'm not sure how should I write this number to the output file, may I `echo 7 > filename.txt`, or manually edit the file, or I must use `jsonpath and wc -l`? Hopefully you can figure out that for me when you pass it. 
+Not at all for me, after working in this area for some years. So I thought I would get 95% after writing it, but actually I lost points for several tasks and don't even know why. I thought I knew every piece of the concept and knowledge and theory, but many of the tasks don't specify how to answer it via what way. Eg: I know there are 7 pods are up running, but I'm not sure how should I write this number to the output file, may I `echo 7 > filename.txt`, or manually edit the file, or I must use `jsonpath and wc -l`? Hopefully you can figure out that for me when you pass it. 
 
-### Mistakes duirng the exam
+### Mistakes during the exam
 First of all read the questions carefully, because you'll very easily to make mistake, like below:
 * Forgot switching over contexts
 * Done it in a wrong namespace, not every step goes to Default ns in one task.
 * Didn't specify some arguments on the command, like --target-port when exposing a svc
 
 ### Shall I use aliases? May I use them during the exam?
-I do want to use aliases and don't like auto-completion. But I can't garantee the proctor will allow you to download anything. I listed 50 aliases in Notepad and asked her if I could copy/paste them to the exam terminal? The answer I got is: the Notepad is not allowed. So take your own risk here...
+I do want to use aliases and don't like auto-completion. But I can't guarantee the proctor will allow you to download anything. I listed 50 aliases in Notepad and asked her if I could copy/paste them to the exam terminal? The answer I got is: the Notepad is not allowed. So take your own risk here...
 
 Find my 50 golden aliases here: https://github.com/jimmycgz/dotfiles/blob/master/k8s
 
@@ -59,7 +59,7 @@ https://github.com/cncf/curriculum/
 https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
 
 ### What you don't need to spend too much time on
-* Creating yaml files from scratch, just copy/paste from the offical doc
+* Creating yaml files from scratch, just copy/paste from the official doc
 
 ### Build your own cluster on MAC PC using Virtualbox, Vagrant with Ubuntu 20.04 image, details see below exercise.
 https://github.com/justmeandopensource/kubernetes/blob/master/vagrant-provisioning/Vagrantfile
@@ -88,7 +88,7 @@ practice: https://learn.hashicorp.com/vagrant/getting-started/
 * Launch 2 VMs by Vagrant, can leverage below launch template and disable all of the bootstrap scripts
 https://github.com/justmeandopensource/kubernetes/blob/master/vagrant-provisioning/Vagrantfile
 
-#### Stronly suggest to disable all of the bash scripts in the vagrant file, then bootstrap the master and worker nodes manually by yourself, you'll learn all the steps via kubeadm.
+#### Strongly recommend to disable all of the bash scripts in the vagrant file, then bootstrap the master and worker nodes manually by yourself, you'll learn all the steps via kubeadm.
 
 Run `vagrant up` in the folder where has the above launch template file
 More commands
@@ -148,7 +148,7 @@ kg po
 ```
 
 ### How to destroy the cluster and start again
-Just reset on each master and worker node, then init the master and join the worker(s). If you wanna change the dns/hosts config for any node, make sure the lagacy ones are reachable when reseting, and verify the new endpoints belore re-building. 
+Just reset on each master and worker node, then init the master and join the worker(s). If you wanna change the dns/hosts config for any node, make sure the legacy ones are reachable when reseting, and verify the new endpoints before re-building. 
 ```
 sudo kubeadm reset -f
 ```
